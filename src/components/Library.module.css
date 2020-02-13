@@ -1,0 +1,7 @@
+.item {
+    list-style: upper-latin;
+}
+
+.director {
+    list-style: decimal-leading-zero;
+}

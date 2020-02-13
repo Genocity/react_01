@@ -1,13 +1,15 @@
 import React from "react";
+import books from "./Books.module.css";
 
 const Books = () => {
+    console.log(books.item);
     return (
         <ul>
-            <li>Antifragile</li>
-            <li>Pale fire</li>
-            <li>Old man and sea</li>
-            <li>1984</li>
-            <li>The Prince</li>
+            <li className={books.item}>Antifragile</li>
+            <li className={books.item}>Pale fire</li>
+            <li className={books.item}>Old man and sea</li>
+            <li className={books.item}>1984</li>
+            <li className={books.item}>The Prince</li>
         </ul>
     );
 };
