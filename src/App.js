@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Library from "./components/Library";
+import Library from "./components/Library/Library";
 
 function App() {
     let firstName = "Community";
