@@ -6,7 +6,7 @@ const Library = (props) => {
     console.log(props);
     return(
         <div>
-            <h2>{props.props.name}</h2>
+            <h2></h2>
             <Books />
             <Books />
             <h3>Librarians</h3>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Library from "./components/Library/Library";
+import {BrowserRouter, Route} from "react-router-dom";
+import Books from "./components/Books/Books";
 
 function App() {
     let firstName = "Community";
@@ -13,12 +15,19 @@ function App() {
         "name": `${firstName} + ${secondName} #2`,
         "color": "blue"
     };
-  return (
-    <div className="App">
-        <Library props={lib1Props}/>
-        <Library props={lib2Props}/>
-    </div>
-  );
+    console.log(window.history);
+
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Route
+                    path="/lib"
+                    component={() => <Library props={lib2Props}/>}
+                />
+                <Route path="/books" component={Books}/>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
