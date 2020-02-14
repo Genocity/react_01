@@ -7,24 +7,39 @@ import Books from "./components/Books/Books";
 function App() {
     let firstName = "Community";
     let secondName = "Library";
-    let lib1Props = {
-        "name": `${firstName} + ${secondName}`,
-        "color": "blue"
-    };
-    let lib2Props = {
-        "name": `${firstName} + ${secondName} #2`,
-        "color": "blue"
-    };
+    /*    let lib1Props = {
+            "name": `${firstName} + ${secondName}`,
+            "color": "blue"
+        };
+        let lib2Props = {
+            "name": `${firstName} + ${secondName} #2`,
+            "color": "blue"
+        };*/
+    let libsProps = [
+        {
+            "name": `${firstName} + ${secondName}`,
+            "color": "blue"
+        },
+        {
+            "name": `${firstName} + ${secondName} #2`,
+            "color": "blue"
+        }
+
+    ];
+    let libraries = libsProps.map(item => {
+        return <Library props={item.name}/>
+    });
     console.log(window.history);
 
     return (
         <BrowserRouter>
             <div className="App">
-                <Route
+                {/*<Route
                     path="/lib"
                     component={() => <Library props={lib2Props}/>}
                 />
-                <Route path="/books" component={Books}/>
+                <Route path="/books" component={Books}/>*/}
+                {libraries}
             </div>
         </BrowserRouter>
     );
