@@ -2,7 +2,6 @@ import React from "react";
 import books from "./Books.module.css";
 
 const Books = () => {
-    console.log(books.item);
     return (
         <ul>
             <li className={books.item}>Antifragile</li>
