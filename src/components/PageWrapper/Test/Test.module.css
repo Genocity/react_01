@@ -1,0 +1,26 @@
+.textarea {
+    background: transparent;
+    color: wheat;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid crimson;
+    width: 50vh;
+}
+.textarea:focus {
+    outline: none;
+}
+
+.wrapper {
+    margin: 10px;
+}
+
+.posts {
+    margin-top: 10px;
+}
+
+.post {
+    box-sizing: border-box;
+    border: 1px solid crimson;
+    border-radius: 5px;
+    margin-top: 5px;
+}

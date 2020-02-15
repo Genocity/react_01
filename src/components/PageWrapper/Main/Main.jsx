@@ -1,6 +1,6 @@
 import React from "react";
 
-let AllOccurrences = (props) => {
+let Main = (props) => {
     let items = props.state.items.map(item => {
         return <li>{item}</li>
     });
@@ -12,4 +12,4 @@ let AllOccurrences = (props) => {
     );
 };
 
-export default AllOccurrences;
+export default Main;

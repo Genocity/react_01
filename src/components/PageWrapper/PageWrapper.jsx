@@ -2,8 +2,9 @@ import React from "react";
 import Header from "./Header/Header";
 import s from "./PageWrapper.module.css"
 import {Route} from "react-router-dom";
-import AllOccurrences from "./AccOccurrences/AllOccurrences";
+import Main from "./Main/Main";
 import Settings from "./Settings/Settings";
+import Test from "./Test/Test";
 
 let PageWrapper = (props) => {
 
@@ -29,12 +30,16 @@ let PageWrapper = (props) => {
         <div className={s.pageWrapper}>
             <Header state={props.state.header}/>
             <Route
-                path="/all_occurrences"
-                render={() => <AllOccurrences state={props.state.allOccurrences}/>}
+                path="/main"
+                render={() => <Main state={props.state.main}/>}
             />
             <Route
                 path="/settings"
                 render={() => <Settings state={props.state.settings}/>}
+            />
+            <Route
+                path="/test"
+                render={() => <Test state={props.state.test} addPost={props.addPost}/>}
             />
         </div>
     );
