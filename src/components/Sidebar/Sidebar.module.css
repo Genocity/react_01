@@ -1,0 +1,25 @@
+.sideBar {
+    box-sizing: border-box;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+}
+
+.menuItem {
+    margin: 10px;
+    color: crimson;
+    text-decoration: none;
+
+}
+
+.menuItem > * {
+    color: crimson;
+    text-decoration: none;
+}
+
+.active {
+    color: wheat;
+}

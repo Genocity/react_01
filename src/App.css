@@ -1,9 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #1D2021;
     color: wheat;
     font-size: 1.5em;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 li {
-    list-style: georgian;
+    list-style: none;
 }
