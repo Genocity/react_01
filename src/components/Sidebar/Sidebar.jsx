@@ -4,7 +4,6 @@ import Logo from "./Logo/Logo";
 import {NavLink} from "react-router-dom";
 
 let Sidebar = (props) => {
-
     let items = props.state.menu.items.map(item => {
         return (
             <li className={s.menuItem}>

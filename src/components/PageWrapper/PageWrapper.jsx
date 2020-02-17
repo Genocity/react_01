@@ -7,7 +7,6 @@ import Settings from "./Settings/Settings";
 import Test from "./Test/Test";
 
 let PageWrapper = (props) => {
-
     // tried to map Render
     /*let pages = Object.values(props.state);
     pages.shift();
@@ -25,7 +24,6 @@ let PageWrapper = (props) => {
             render={() => <AllOccurrences state={props.state.allOccurrences}/>}
         />
     );*/
-
     return (
         <div className={s.pageWrapper}>
             <Header state={props.state.header}/>
@@ -39,7 +37,10 @@ let PageWrapper = (props) => {
             />
             <Route
                 path="/test"
-                render={() => <Test state={props.state.test} addPost={props.addPost}/>}
+                render={() => <Test
+                    state={props.state.test}
+                    dispatch={props.dispatch}
+                />}
             />
         </div>
     );
