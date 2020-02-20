@@ -7,6 +7,7 @@ import Settings from "./Settings/Settings";
 import Test from "./Test/Test";
 
 let PageWrapper = (props) => {
+    debugger;
     // tried to map Render
     /*let pages = Object.values(props.state);
     pages.shift();

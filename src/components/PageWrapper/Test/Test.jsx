@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./Test.module.css"
-import {addPostActionCreator, updatePostMessageActionCreator} from "../../../redux/textareaDataReducer";
+import {addPostActionCreator, updatePostMessageActionCreator} from "../../../redux/pageWrapperReducer";
 
 let Test = (props) => {
-
+    debugger;
 
     let posts = props.state.posts.map((item) => {
         return (

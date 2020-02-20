@@ -1,4 +1,4 @@
-import textareaDataReducer from "./textareaDataReducer";
+import pageWrapperReducer from "./pageWrapperReducer";
 
 let store = {
     _state: {
@@ -32,7 +32,7 @@ let store = {
                 textareaData: ""
             }
         },
-        sideBar: {
+        sidebar: {
             menu: {
                 items: [
                     {
@@ -57,10 +57,10 @@ let store = {
     subscribe(listener) {
         this.callSubscriber = listener;
     },
-    callSubscriber() { // function that will be overridden by subscribe
+    callSubscriber() { // function that will be overridden by subscriber
     },
     dispatch(action) {
-        this._state.pageWrapper.test = textareaDataReducer(
+        this._state.pageWrapper.test = pageWrapperReducer(
             this._state.pageWrapper.test,
             action
         );
