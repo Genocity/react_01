@@ -1,7 +1,7 @@
 import React from "react";
 
 let Settings = (props) => {
-    let items = props.state.items.map(item => {
+    let items = props.items.map(item => {
         return <li>{item}</li>
     });
 

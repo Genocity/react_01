@@ -6,9 +6,9 @@
     border: 1px solid crimson;
     width: 50vh;
 }
-.textarea:focus, .addPost:focus {
+/*.textarea:focus, .addPost:focus {
     outline: none;
-}
+}*/
 
 .wrapper {
     margin: 10px;

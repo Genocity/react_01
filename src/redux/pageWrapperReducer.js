@@ -7,7 +7,7 @@ let initialState = {
     },
     main: {
         path: "/main",
-            items: [
+        items: [
             "password 1",
             "password 2",
             "password 3",
@@ -16,7 +16,7 @@ let initialState = {
     },
     settings: {
         path: "/settings",
-            items: [
+        items: [
             "setting 1",
             "setting 2",
             "setting 3",
@@ -25,16 +25,12 @@ let initialState = {
     },
     test: {
         path: "/test",
-            posts: [
-
-        ],
-            textareaData: ""
+        posts: [],
+        textareaData: ""
     }
 };
 
 let pageWrapperReducer = (state = initialState, action) => {
-    debugger;
-    // eslint-disable-next-line default-case
     switch (action.type) {
         case ADD_POST:
             if (state.test.textareaData && state.test.textareaData[0] !== " ") {
@@ -42,16 +38,28 @@ let pageWrapperReducer = (state = initialState, action) => {
                     message: state.test.textareaData,
                     anotherInfo: "unused info"
                 };
-                state.test.posts.push(newPost);
+                return {
+                    ...state,
+                    test: {
+                        ...state.test,
+                        posts: [...state.test.posts, newPost],
+                        textareaData: "",
+                    },
+                };
+            } else {
+                return state;
             }
-            state.test.textareaData = "";
-            return state;
-
         case UPDATE_POST_MESSAGE:
-            state.test.textareaData = action.textareaData;
+            return {
+                ...state,
+                test: {
+                    ...state.test,
+                    textareaData: action.textareaData
+                }
+            };
+        default:
             return state;
     }
-    return state;
 };
 
 export const addPostActionCreator = () => {
